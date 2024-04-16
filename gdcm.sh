@@ -17,5 +17,6 @@ for file in $input_dir/*.dcm; do
     output_file="$output_dir/$filename.jp2"
 
     # 执行转换操作
-    gdcmconv --raw $file $output_file
+    # gdcmconv --raw $file $output_file
+     gdcmconv --j2k -i $file -o $output_file
 done
